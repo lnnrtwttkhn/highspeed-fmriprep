@@ -1,0 +1,72 @@
+---
+title: "Faster than thought: Detecting sub-second activation sequences with sequential fMRI pattern analysis"
+subtitle: "Short project title: highspeed"
+author:
+  - Lennart Wittkuhn^[Max Planck Institute for Human Development, wittkuhn@mpib-berlin.mpg.de]
+  - Nicolas W. Schuck^[Max Planck Institute for Human Development, schuck@mpib-berlin.mpg.de]
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
+output:
+ html_document:
+    toc: true
+    self_contained: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    highlight: pygments
+    theme: cosmo
+    df_print: paged
+    fig_caption: true
+fig.align: "center"
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{AgfaRotisSansSerif}
+email: wittkuhn@mpib-berlin.mpg.de
+---
+
+```{r, echo=FALSE, message=FALSE, include=FALSE}
+if (!requireNamespace("pacman")) install.packages("pacman")
+packages_cran <- c("here")
+pacman::p_load(char = packages_cran)
+if (basename(here::here()) == "highspeed"){
+  path_root = here::here("highspeed-fmriprep")
+} else {
+  path_root = here::here()
+}
+```
+
+# MRI pre-processing using fMRIPrep
+
+We used [fMRIPrep](https://fmriprep.org/en/stable/), version 1.2.2, to pre-process the BIDS-converted MRI data.
+
+According to the [fMRIPrep documentation](https://fmriprep.org/en/stable/) ...
+
+> fMRIPrep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.
+
+Please see the [fMRIPrep documentation](https://fmriprep.org/en/stable/) for details and refer to the paper listed in the References section.
+
+### Code and software
+
+#### `fmriprep` container, version 1.2.2
+
+We first generated a Singularity container based on the fMRIPrep docker image:
+
+``` bash
+singularity pull docker://poldracklab/fmriprep:1.2.2
+```
+
+#### Run fMRIPrep on the cluster: `highspeed-fmriprep-cluster.sh`
+
+We then ran fMRIPrep on the high-performance cluster of the Max Planck Institute for Human Development, Berlin, Germany:
+
+```{bash, echo=TRUE, code=readLines(file.path(path_root, "code", "fmriprep", "highspeed-fmriprep-cluster.sh")), eval=FALSE}
+```
+
+### References
+
+> Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., Kent, J. D., Goncalves, M., DuPre, E., Snyder, M., and et al. (2019). fMRIPrep 1.2.2. [doi:10.5281/zenodo.852659](dx.doi.org/10.5281/zenodo.852659)
+
+> Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., Kent, J. D., Goncalves, M., DuPre, E., Snyder, M., and et al. (2018). fMRIPrep: A robust preprocessing pipeline for functional MRI. Nature Methods, 16(1):111–116. [doi:10.1038/s41592-018-0235-4](http://dx.doi.org/10.1038/s41592-018-0235-4)
+
+> Esteban, O., Ciric, R., Finc, K., Blair, R. W., Markiewicz, C. J., Moodie, C. A., Kent, J. D., Goncalves, M., DuPre, E., Gomez, D. E. P., and et al. (2020). Analysis of task-based functional mri data preprocessed with fmriprep. Nature Protocols. [doi:10.1038/s41596-020-0327-3](http://dx.doi.org/10.1038/s41596-020-0327-3)
+
+
