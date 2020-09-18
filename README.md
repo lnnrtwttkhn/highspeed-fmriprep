@@ -24,3 +24,8 @@ For all other general questions, you may also write an email to:
 
 - [Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de)
 - [Nicolas W. Schuck](mailto:schuck@mpib-berlin.mpg.de)
+
+## License
+
+All of the data are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.
+Please see the [LICENSE](LICENSE) file and https://creativecommons.org/licenses/by-nc-sa/4.0/ for details.
