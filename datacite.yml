@@ -1,0 +1,78 @@
+# Metadata for DOI registration according to DataCite Metadata Schema 4.1.
+# For detailed schema description see https://doi.org/10.5438/0014
+
+## Required fields
+
+# The main researchers involved. Include digital identifier (e.g., ORCID)
+# if possible, including the prefix to indicate its type.
+authors:
+  -
+    firstname: "Lennart"
+    lastname: "Wittkuhn"
+    affiliation: "Max Planck Institute for Human Development, Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany"
+    id: "ORCID:0000-0001-2345-6789"
+  -
+    firstname: "Nicolas W."
+    lastname: "Schuck"
+    affiliation: "Max Planck Institute for Human Development, Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany"
+    id: "ResearcherID:X-1234-5678"
+
+# A title to describe the published resource.
+title: "Faster than thought: Detecting sub-second activation sequences with sequential fMRI pattern analysis"
+
+# Additional information about the resource, e.g., a brief abstract.
+description: |
+  Neural computations are often anatomically localized and executed on sub-second time scales.
+  Understanding the brain therefore requires methods that offer sufficient spatial and temporal resolution.
+  This poses a particular challenge for the study of the human brain because non-invasive methods have either high temporal or spatial resolution, but not both.
+  Here, we introduce a novel multivariate analysis method for conventional blood-oxygen-level dependent functional magnetic resonance imaging (BOLD fMRI) that allows to study sequentially activated neural patterns separated by less than 100 ms with anatomical precision.
+  Human participants underwent fMRI and were presented with sequences of visual stimuli separated by 32 to 2048 ms.
+  Probabilistic pattern classifiers were trained on fMRI data to detect the presence of image-specific activation patterns in early visual and ventral temporal cortex.
+  The classifiers were then applied to data recorded during sequences of the same images presented at increasing speeds.
+  Our results show that probabilistic classifier time courses allowed to detect neural representations and their order, even when images were separated by only 32 ms.
+  Moreover, the frequency spectrum of the statistical sequentiality metric distinguished between sequence speeds on sub-second versus supra-second time scales.
+  These results survived when data with high levels of noise and rare sequence events at unknown times were analyzed.
+  Our method promises to lay the groundwork for novel investigations of fast neural computations in the human brain, such as hippocampal replay.
+
+# Lit of keywords the resource should be associated with.
+# Give as many keywords as possible, to make the resource findable.
+keywords:
+  - Neuroscience
+  - functional magnetic resonance imaging
+  - hippocampal replay
+
+# License information for this resource. Please provide the license name and/or a link to the license.
+# Please add also a corresponding LICENSE file to the repository.
+license:
+  name: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0"
+  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+
+
+
+## Optional Fields
+
+# Funding information for this resource.
+# Separate funder name and grant number by comma.
+funding:
+  - "Max Planck Society (M.TN.A.BILD0004)"
+  - "Max Planck Institute for Human Development"
+
+
+# Related publications. reftype might be: IsSupplementTo, IsDescribedBy, IsReferencedBy.
+# Please provide digital identifier (e.g., DOI) if possible.
+# Add a prefix to the ID, separated by a colon, to indicate the source.
+# Supported sources are: DOI, arXiv, PMID
+# In the citation field, please provide the full reference, including title, authors, journal etc.
+references:
+  -
+    id: "doi:10.1101/2020.02.15.950667"
+    reftype: "IsSupplementTo"
+    citation: "Wittkuhn, L. and Schuck, N. W. (2020). Faster than thought: Detecting sub-second activation sequences with sequential fMRI pattern analysis. bioRxiv. doi:10.1101/2020.02.15.950667"
+
+
+
+# Resource type. Default is Dataset, other possible values are Software, DataPaper, Image, Text.
+resourcetype: Dataset
+
+# Do not edit or remove the following line
+templateversion: 1.2
