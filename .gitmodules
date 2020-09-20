@@ -1,7 +1,3 @@
-[submodule "tools"]
-	path = tools
-	url = https://github.com/lnnrtwttkhn/tools
-	datalad-id = f86aafdc-f826-11ea-a009-d4ae5294d597
 [submodule "bids"]
 	path = bids
 	url = https://github.com/lnnrtwttkhn/highspeed-bids
