@@ -1,27 +1,3 @@
----
-title: "Faster than thought: Detecting sub-second activation sequences with sequential fMRI pattern analysis"
-subtitle: "Short project title: highspeed"
-author:
-  - Lennart Wittkuhn^[Max Planck Institute for Human Development, wittkuhn@mpib-berlin.mpg.de]
-  - Nicolas W. Schuck^[Max Planck Institute for Human Development, schuck@mpib-berlin.mpg.de]
-date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"
-output:
- html_document:
-    toc: true
-    self_contained: true
-    toc_float: true
-    toc_depth: 3
-    number_sections: true
-    highlight: pygments
-    theme: cosmo
-    df_print: paged
-    fig_caption: true
-fig.align: "center"
-header-includes:
-  - \usepackage{fontspec}
-  - \setmainfont{AgfaRotisSansSerif}
-email: wittkuhn@mpib-berlin.mpg.de
----
 
 ```{r, echo=FALSE, message=FALSE, include=FALSE}
 if (!requireNamespace("pacman")) install.packages("pacman")
@@ -34,7 +10,9 @@ if (basename(here::here()) == "highspeed"){
 }
 ```
 
-# MRI pre-processing using fMRIPrep
+## MRI pre-processing using fMRIPrep
+
+### Overview
 
 We used [fMRIPrep](https://fmriprep.org/en/stable/), version 1.2.2, to pre-process the BIDS-converted MRI data.
 
@@ -44,9 +22,7 @@ According to the [fMRIPrep documentation](https://fmriprep.org/en/stable/) ...
 
 Please see the [fMRIPrep documentation](https://fmriprep.org/en/stable/) for details and refer to the paper listed in the References section.
 
-### Code and software
-
-#### `fmriprep` container, version 1.2.2
+#### Container `fmriprep` container, version 1.2.2
 
 We first generated a Singularity container based on the fMRIPrep docker image:
 
@@ -61,7 +37,7 @@ We then ran fMRIPrep on the high-performance cluster of the Max Planck Institute
 ```{bash, echo=TRUE, code=readLines(file.path(path_root, "code", "fmriprep", "highspeed-fmriprep-cluster.sh")), eval=FALSE}
 ```
 
-### References
+#### References
 
 > Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., Kent, J. D., Goncalves, M., DuPre, E., Snyder, M., and et al. (2019). fMRIPrep 1.2.2. [doi:10.5281/zenodo.852659](dx.doi.org/10.5281/zenodo.852659)
 
