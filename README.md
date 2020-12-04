@@ -1,4 +1,4 @@
-# Faster than thought: Detecting sub-second activation sequences with sequential fMRI pattern analysis - fMRIPrep data
+# Highspeed fMRIPrep
 
 ## Overview
 
@@ -13,6 +13,10 @@ Pre-processing was performed using fMRIPrep, version 1.2.2.
 - `/logs` and `/work` are empty directories (held in place by `.gitkeep` file) and contain log files and the (huge) working directory ouput that fMRIPrep produced. They are populated during the execution of `highspeed-fmriprep-cluster.sh` but not committed to this repo because they will not be used further downstream in the analyses.
 
 ## Citation
+
+> Wittkuhn, L. and Schuck, N. W. (2020). Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex. *Nature Communications*.
+
+A preprint (old version) is available at:
 
 > Wittkuhn, L. and Schuck, N. W. (2020). Faster than thought: Detecting sub-second activation sequences with sequential fMRI pattern analysis. *bioRxiv*. [doi:10.1101/2020.02.15.950667](http://dx.doi.org/10.1101/2020.02.15.950667)
 
