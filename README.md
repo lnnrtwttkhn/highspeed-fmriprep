@@ -10,7 +10,7 @@ Pre-processing was performed using fMRIPrep, version 1.2.2.
 - `/code` contains all project-specific code with sub-directories `/docs` for project-specific documentation and `/fmriprep` for the code relevant to run `fMRIPrep` on the input `/bids` dataset
 - `/bids` contains the defaced BIDS-converted MRI dataset as an input to fMRIPrep and is included as an independent sub-datatset
 - `/tools` contains the relevant fMRIPrep container and the necessary Freesurfer license file in the `fmriprep` sub-directory.
-- `/logs` and `/work` are empty directories (held in place by `.gitkeep` file) and contain log files and the (huge) working directory ouput that fMRIPrep produced. They are populated during the execution of `highspeed-fmriprep-cluster.sh` but not committed to this repo because they will not be used further downstream in the analyses.
+- `/logs` and `/work` are empty directories (held in place by `.gitkeep` files) and contain log files and the (huge) working directory ouput that fMRIPrep produced. They are populated during the execution of `highspeed-fmriprep-cluster.sh` but not committed to this repo because they will not be used further downstream in the analyses.
 
 ## Citation
 
@@ -31,5 +31,5 @@ For all other general questions, you may also write an email to:
 
 ## License
 
-All of the data are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.
-Please see the [LICENSE](LICENSE) file and https://creativecommons.org/licenses/by-nc-sa/4.0/ for details.
+All of the data are licensed under Creative Commons Attribution-ShareAlike 4.0.
+Please see the [LICENSE](LICENSE) file and https://creativecommons.org/licenses/by-sa/4.0/ for details.
