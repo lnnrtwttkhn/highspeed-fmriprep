@@ -10,7 +10,7 @@ if (basename(here::here()) == "highspeed"){
 }
 ```
 
-## MRI pre-processing using fMRIPrep
+## MRI pre-processing:Running fMRIPrep
 
 ### Overview
 
@@ -22,7 +22,16 @@ According to the [fMRIPrep documentation](https://fmriprep.org/en/stable/) ...
 
 Please see the [fMRIPrep documentation](https://fmriprep.org/en/stable/) for details and refer to the paper listed in the References section.
 
-#### Container `fmriprep` container, version 1.2.2
+#### Data availability
+
+The data is freely available from https://github.com/lnnrtwttkhn/highspeed-fmriprep and https://gin.g-node.org/lnnrtwttkhn/highspeed-fmriprep.
+
+#### License
+
+The dataset is licensed under Creative Commons Attribution-ShareAlike 4.0.
+Please see https://creativecommons.org/licenses/by-sa/4.0/ for details.
+
+### Software: `fmriprep` container, version 1.2.2
 
 We first generated a Singularity container based on the fMRIPrep docker image:
 
@@ -30,14 +39,14 @@ We first generated a Singularity container based on the fMRIPrep docker image:
 singularity pull docker://poldracklab/fmriprep:1.2.2
 ```
 
-#### Run fMRIPrep on the cluster: `highspeed-fmriprep-cluster.sh`
+### Run fMRIPrep on HPC
 
-We then ran fMRIPrep on the high-performance cluster of the Max Planck Institute for Human Development, Berlin, Germany:
+We then ran fMRIPrep on the high-performance cluster (HPC) of the Max Planck Institute for Human Development, Berlin, Germany using the code in `highspeed-fmriprep-cluster.sh`:
 
 ```{bash, echo=TRUE, code=readLines(file.path(path_root, "code", "fmriprep", "highspeed-fmriprep-cluster.sh")), eval=FALSE}
 ```
 
-#### References
+### References
 
 > Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., Kent, J. D., Goncalves, M., DuPre, E., Snyder, M., and et al. (2019). fMRIPrep 1.2.2. [doi:10.5281/zenodo.852659](dx.doi.org/10.5281/zenodo.852659)
 
